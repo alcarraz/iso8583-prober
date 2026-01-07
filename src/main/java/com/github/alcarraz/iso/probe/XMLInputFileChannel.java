@@ -1,7 +1,7 @@
 /*
  * jpos-prober [https://github.com/alcarraz/jpos-prober]
  *
- * Copyright (C) 2024.  Andrés Alcarraz
+ * Copyright (C) 2026.  Andrés Alcarraz
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -18,7 +18,7 @@
  *
  */
 
-package org.jpos.probe;
+package com.github.alcarraz.iso.probe;
 
 import org.jpos.iso.ISOException;
 import org.jpos.iso.channel.XMLChannel;

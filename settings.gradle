@@ -1,7 +1,7 @@
 /*
  * jpos-prober [https://github.com/alcarraz/jpos-prober]
  *
- * Copyright (C) 2024.  Andrés Alcarraz
+ * Copyright (C) 2026.  Andrés Alcarraz
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -25,4 +25,4 @@
  * For more detailed information on multi-project builds, please refer to https://docs.gradle.org/8.2.1/userguide/building_swift_projects.html in the Gradle documentation.
  */
 
-rootProject.name = 'jpos-prober'
+rootProject.name = 'iso8583-prober'

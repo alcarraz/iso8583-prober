@@ -1,7 +1,7 @@
 /*
  * jpos-prober [https://github.com/alcarraz/jpos-prober]
  *
- * Copyright (C) 2024.  Andrés Alcarraz
+ * Copyright (C) 2026.  Andrés Alcarraz
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -18,7 +18,7 @@
  *
  */
 
-package org.jpos.probe;
+package com.github.alcarraz.iso.probe;
 
 import org.apache.commons.cli.CommandLine;
 import org.apache.commons.cli.CommandLineParser;
@@ -62,7 +62,7 @@ public class Probe extends QBeanSupport {
     protected void startService() {
         Thread t = new Thread( () -> {
             try (InputStream input = messageFile.equals("-") ? System.in : new FileInputStream(messageFile); 
-                 XMLInputFileChannel channel = new XMLInputFileChannel(input);) 
+                 XMLInputFileChannel channel = new XMLInputFileChannel(input)) 
             {
                 while (true) {
                     ISOMsg request = channel.receive();
@@ -95,6 +95,7 @@ public class Probe extends QBeanSupport {
                 .addOption("p", "packager.config", true, "Packager config used to connect to destination")
                 .addOption("ch","channel", true, "channel class used to connect to destination")
                 .addOption(null, "header", true, "Header of destination channel")
+                .addOption("oh", "channel.override-header", true, "override message header with channel")
                 /* this will be possible if PR  https://github.com/jpos/jPOS/pull/560 
                     is approved and merged
                     .addOption("k", "mux.key", true, "Key used to match responses by the mux")
