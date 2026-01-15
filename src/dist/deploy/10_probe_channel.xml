@@ -21,7 +21,7 @@
 <channel-adaptor name='probe-channel' class="org.jpos.q2.iso.ChannelAdaptor"
                  logger="${probe.logger:Q2}" realm="probe-channel-adaptor"
                  enabled="${probe.enabled:true}">
-  <channel class="${probe.channel.class:org.jpos.iso.channel.ASCIIChannel}"
+  <channel class="${probe.channel:org.jpos.iso.channel.ASCIIChannel}"
            packager="${probe.packager:org.jpos.iso.packager.GenericPackager}"
            logger="${probe.logger:Q2}" realm="probe-channel"
            header="${probe.header:}">
