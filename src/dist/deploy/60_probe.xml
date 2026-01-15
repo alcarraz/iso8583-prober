@@ -18,7 +18,7 @@
   ~
   -->
 
-<probe class="org.jpos.probe.Probe" realm="probe" enabled="${probe.enabled:true}">
+<probe class="com.github.alcarraz.iso.probe.Probe" realm="probe" enabled="${probe.enabled:true}">
   <property name="timeout" value="${probe.timeout:30000}"/>
   <property name="shutdown" value="${probe.shutdown:true}"/>
   <property name="messages-file" value="${probe.message-file:-}"/>
