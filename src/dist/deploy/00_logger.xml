@@ -23,6 +23,8 @@
     <property name="dump-interval" value="60000"/>
     <disabled>${probe.log.disable-realms:Q2.system}</disabled>
   </log-listener>
-
-  <log-listener class="org.jpos.util.SimpleLogListener" />
+  <log-listener class="org.jpos.util.FilterLogListener" enabled="${!probe.verbose}">
+    <property name="priority" value="info"/>
+  </log-listener>
+  <log-listener class="org.jpos.util.SimpleLogListener" enabled="${probe.verbose}" />
 </logger>
